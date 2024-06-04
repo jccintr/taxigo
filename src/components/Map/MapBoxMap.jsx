@@ -25,6 +25,9 @@ const MapBoxMap = () => {
         duration: 2500,
       });
     }
+    if (sourceCordinates && destinationCordinates) {
+      getDirectionRoute();
+    }
   }, [sourceCordinates]);
   //Use to Fly to Destination Markers Location
   useEffect(() => {

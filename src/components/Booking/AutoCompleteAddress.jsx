@@ -29,14 +29,13 @@ const AutoCompleteAddress = () => {
               "Content-Type": "application/json",  
       }
       });
-    //  console.log(url);
      const result = await res.json();
-     //console.log(result);
+    
       setAddressList(result)
       
   }
 
-  const onSourceAddressClick=async(item)=>{
+  const onSourceAddressClick = async (item) => {
     setSource(item.name);
     setAddressList([]);
     setSourceChange(false);
@@ -54,7 +53,7 @@ const AutoCompleteAddress = () => {
     
 }
 
-const onDestinationAddressClick=async(item)=>{
+const onDestinationAddressClick = async (item) => {
   setDestination(item.name);
   setAddressList([]);
   setDestinationChange(false)
@@ -68,7 +67,7 @@ const onDestinationAddressClick=async(item)=>{
       lng:result.features[0].geometry.coordinates[0],
       lat:result.features[0].geometry.coordinates[1], 
   })
-//  console.log(result);
+
 }
 
 
@@ -77,7 +76,7 @@ const onDestinationAddressClick=async(item)=>{
   return (
     <div className=''>
         <div className='relative'>
-            <label className=' text-[14px]'>Ponto de Partida</label>
+            <label className=' text-[14px] font-semibold'>Ponto de Partida</label>
             <input type="text" className='bg-white p-1 border-[1px] w-full rounded-md outline-none focus:border-yellow-300 text-[14px]'
                    value={source}
                    onChange={(e)=>{setSource(e.target.value);setSourceChange(true)}}
@@ -90,7 +89,7 @@ const onDestinationAddressClick=async(item)=>{
            </div>:null}
         </div>
         <div className='relative'>
-            <label className='text-[14px]'>Ponto de Chegada</label>
+            <label className='text-[14px] font-semibold'>Ponto de Chegada</label>
             <input type="text" className='bg-white p-1 border-[1px] w-full rounded-md outline-none focus:border-yellow-300 text-[14px]'
                    value={destination}
                    onChange={(e)=>{setDestination(e.target.value);setDestinationChange(true)}}

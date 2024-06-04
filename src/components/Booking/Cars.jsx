@@ -12,7 +12,7 @@ const Cars = () => {
 
   return (
     <div className='mt-3'>
-        <h2 className='font-medium text-[14px] '>Escolha o carro</h2>
+        <h2 className='font-semibold text-[14px]'>Escolha o carro</h2>
         <div className='grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3'>
             {CarsList.map((item,index)=>(
                 <div key={index} className={`m-2 p-2 border-[1px] rounded-md hover:border-yellow-400 cursor-pointer
