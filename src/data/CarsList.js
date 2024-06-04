@@ -1,0 +1,32 @@
+export default [
+    {
+        id:1,
+        name:'Econômico',
+        image:'/11.png',
+        charges:1
+    },
+    {
+        id:2,
+        name:'Sedã',
+        image:'/22.png',
+        charges:1.2
+    },
+    {
+        id:3,
+        name:'Conforto',
+        image:'/33.png',
+        charges:1.5
+    },
+    {
+        id:4,
+        name:'Luxo',
+        image:'/44.png',
+        charges:2
+    },
+    {
+        id:5,
+        name:'Elétrico',
+        image:'/55.png',
+        charges:2.2
+    }
+]
